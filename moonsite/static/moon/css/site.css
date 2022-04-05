@@ -1,0 +1,150 @@
+/*html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #1A1A1A;
+}
+
+a, h2, label, p {
+    color: white;
+}*/
+
+.centered-root {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.errorlist {
+    color: red;
+}
+
+
+.toggle-button {
+  height: 40px;
+  width: 40px;
+  margin: auto;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.slider {
+  height: 33.33%;
+  width: 100%;
+}
+
+#outer-pane {
+  min-height: 267px;
+  min-width: 200px;
+  max-height: 320px;
+  max-width: 240px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#bottom-pane, #top-pane, #colorbox{
+  float: top;
+  overflow: hidden;
+  width: 100%;
+}
+
+#bottom-pane {
+  position: relative;
+  background-color: #000000;
+  height: 27.5%;
+}
+
+#top-pane {
+  background-color: #F7F7F7;
+  height: 67.5%;
+}
+
+#colorbox {
+  background-color: #FF0000;
+  height: 2.5%;
+}
+
+
+#power {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 27px;
+  height: 30px;
+  margin: -14px 0 0 -15px;
+  background-image: url("../images/power_icon_light.png");
+}
+
+#sliders {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+}
+
+#labels {
+  position: relative;
+  top: 50%;
+  left: 55%;
+  height: 25%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+}
+
+#labels div {
+    float: left;
+    margin: 0 50px 0 0;
+}
+
+#labels div span {
+    font-weight: bold;
+}
+
+#labels div::after {
+    clear: both;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-default:active,
+.btn-default.active {
+  background-color: #ffffff;
+}
+
+.btn-default:hover {
+  background-color: #ebebeb;
+}
+
