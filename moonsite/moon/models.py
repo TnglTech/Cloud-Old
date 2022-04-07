@@ -20,13 +20,13 @@ def generate_association_code():
     return uuid4().hex
 
 
-def generate_device_association_topic(type, device_id):
-    return 'devices/{}/{}/associated'.format(device_id, type)
+def generate_device_association_topic(device_id):
+    return 'devices/{}/device/associated'.format(device_id)
 
 
-def send_association_message(type, device_id, message):
+def send_association_message(device_id, message):
     paho.mqtt.publish.single(
-        generate_device_association_topic(type, device_id),
+        generate_device_association_topic(device_id),
         json.dumps(message),
         qos=2,
         retain=True,
@@ -72,7 +72,7 @@ class Device(PolymorphicModel):
             'associated': False,
             'code': self.association_code
         }
-        send_association_message(self.type, self.device_id, assoc_msg)
+        send_association_message(self.device_id, assoc_msg)
 
     def associate_and_publish_associated_msg(self, user):
         # update Device instance with new user
@@ -82,7 +82,7 @@ class Device(PolymorphicModel):
         assoc_msg = {
             'associated': True
         }
-        send_association_message(self.type, self.device_id, assoc_msg)
+        send_association_message(self.device_id, assoc_msg)
 
     def __str__(self):
         return "{}: {}".format(self.device_id, self.name)

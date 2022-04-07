@@ -12,8 +12,8 @@ MQTT_MOONLAMP_BROKER_RE_PATTERN = (r'\$sys\/broker\/connection\/'
 LAMPI_DEVICE_STATE_RE_PATTERN = r'devices\/(?P<device_id>[0-9a-f]*)\/lamp\/changed'
 
 
-def device_association_topic(device_id, type):
-    return 'devices/{}/{}/associated'.format(device_id, type)
+def device_association_topic(device_id):
+    return 'devices/{}/device/associated'.format(device_id)
 
 
 class Command(BaseCommand):
