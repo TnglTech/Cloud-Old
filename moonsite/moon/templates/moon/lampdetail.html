@@ -1,4 +1,4 @@
-{% extends "lamp/base.html" %}
+{% extends "moon/base.html" %}
 {% load static %}
 
 {% block title %}Lamp{% endblock %}
@@ -20,6 +20,7 @@
         window_global['device_id'] = "{{ device.device_id }}";
         window_global['mqtt'] = {'hostname': window.location.hostname,
                                 'websockets_port': 50002};
+        console.log(window_global['mqtt']);
     </script>
     <span id="device-id" data-device-id="{{ device.device_id }}"></span>
     <div class="justify-content-center">

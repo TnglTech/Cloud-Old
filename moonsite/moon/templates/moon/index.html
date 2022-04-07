@@ -6,7 +6,7 @@
     {% if devices.moonlamps %}
         <div class="list-group">
         {% for moonlamp in devices.moonlamps %}
-           <a href="{% url 'moon:lampdetail' moonlamp.device_id %}" class="list-group-item list-group-item-action">
+           <a href="{% url 'moon:moonlampdetail' moonlamp.device_id %}" class="list-group-item list-group-item-action">
             {{ moonlamp.name }} : {{ moonlamp.device_id }}</a>
         {% endfor %}
         </div>
