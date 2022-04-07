@@ -97,8 +97,6 @@ class Command(BaseCommand):
         event_props = {'event_type': 'devicestate', 'interface': 'mqtt', 'device_id': device_id}
         event_props.update(json.loads(message.payload.decode('utf-8')))
 
-        self.mp.track('mqttbridge', 'LAMPI State Change', event_props)
-
     def handle(self, *args, **options):
         self._create_default_user_if_needed()
         self._create_mqtt_client_and_loop_forever()

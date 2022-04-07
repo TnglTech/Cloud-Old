@@ -99,7 +99,7 @@ class Lamp(Device):
     type = "lamp"
 
 
-class MoonLamp(Device):
+class MoonLamp(Lamp):
     type = "moonlamp"
 
 

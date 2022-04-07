@@ -6,7 +6,7 @@ from .models import MoonLamp, Lamp
 
 
 def device_association_topic(device_id):
-    return 'devices/{}/lamp/associated'.format(device_id)
+    return 'devices/{}/device/associated'.format(device_id)
 
 
 class DeviceNameForm(forms.Form):
