@@ -18,7 +18,7 @@
     <script type="text/javascript">
         var window_global = {};
         window_global['device_id'] = "{{ device.device_id }}";
-        window_global['mqtt'] = {'hostname': window.location.hostname,
+        window_global['mqtt'] = {'hostname': "mqtt.tngl.tech",
                                 'websockets_port': 50002};
         console.log(window_global['mqtt']);
     </script>
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js" type="text/javascript"></script>
 
