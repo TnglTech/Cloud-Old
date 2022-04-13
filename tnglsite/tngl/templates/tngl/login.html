@@ -1,0 +1,21 @@
+{% extends "tngl/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block additional_head_content %}
+{% endblock %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  <div class="d-grid gap-2 mx-auto">
+    <div class="justify-content-center">
+      <h2 class="text-center">Login</h2>
+    </div>
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Login</button>
+  </div>
+</form>
+{% endblock %}
+
+{% block page_event %}Login{% endblock %}
